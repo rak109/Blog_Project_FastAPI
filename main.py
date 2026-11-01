@@ -31,3 +31,9 @@ def home():
 @app.get("/api/posts")
 def get_posts():
     return posts
+
+
+
+# `include_in_schema=False` hides a route from the list on `/docs`.
+# The route still works if someone visits its URL directly.
+# Hiding a route from `/docs` does not keep its data private; only return data users are allowed to see.
