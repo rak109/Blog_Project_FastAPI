@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>{% block title %}FastAPI Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="FastAPI Blog home">Fieldnotes<span> / A FastAPI blog</span></a>
+        <nav aria-label="Main navigation">
+            <a href="/">Posts</a>
+            <a href="/api/posts">Posts API</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <span>Fieldnotes</span>
+        <span>Built with FastAPI and Jinja2</span>
+    </footer>
+</body>
+</html>

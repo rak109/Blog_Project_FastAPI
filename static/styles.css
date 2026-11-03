@@ -1,0 +1,159 @@
+:root {
+    color-scheme: light;
+    --paper: #f5f3ed;
+    --surface: #fffefa;
+    --ink: #202a27;
+    --muted: #65716c;
+    --line: #d9ded8;
+    --green: #245c4b;
+    --coral: #bd583f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-header,
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem clamp(1rem, 5vw, 4.5rem);
+}
+
+.site-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand span,
+nav,
+.post-meta,
+.site-footer {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.brand span {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: var(--ink);
+    text-decoration-color: transparent;
+    text-underline-offset: 0.25em;
+}
+
+nav a:hover {
+    color: var(--coral);
+    text-decoration-color: currentColor;
+}
+
+main {
+    width: min(100% - 2rem, 56rem);
+    min-height: calc(100vh - 9rem);
+    margin: 0 auto;
+    padding: clamp(3rem, 9vw, 6rem) 0;
+}
+
+.intro {
+    max-width: 42rem;
+    margin-bottom: 3rem;
+}
+
+.eyebrow {
+    color: var(--coral);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0.6rem 0;
+    color: var(--green);
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    line-height: 1;
+}
+
+.intro-copy {
+    max-width: 34rem;
+    color: var(--muted);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.post-list {
+    border-top: 2px solid var(--ink);
+}
+
+.post {
+    padding: 1.5rem 0 1.75rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.post-meta span {
+    color: var(--coral);
+    font-weight: 700;
+}
+
+.post h2 {
+    margin: 0.65rem 0 0.4rem;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    line-height: 1.2;
+}
+
+.post p {
+    max-width: 46rem;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 520px) {
+    .site-header,
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+}
